@@ -5,33 +5,33 @@ import Icon from "@/components/ui/icon";
 const benefits = [
   {
     icon: "Banknote",
-    title: "Высокий доход",
-    description: "От 50 000₽ в месяц при активной работе",
+    title: "Высокие заработки",
+    description: "До 3 000₽ в день + бонусы за план и активность",
   },
   {
     icon: "Clock",
-    title: "Гибкий график",
-    description: "Работайте когда удобно: утром, днем или вечером",
+    title: "Удобный график",
+    description: "Выбирай смены сам: 3, 6 или 12 часов в любое время",
   },
   {
     icon: "Smartphone",
     title: "Простое приложение",
-    description: "Интуитивно понятный интерфейс для получения заказов",
+    description: "Удобное приложение Яндекс.Про для курьеров",
   },
   {
-    icon: "HeadphonesIcon",
-    title: "Поддержка",
-    description: "Круглосуточная техническая поддержка курьеров",
+    icon: "Headphones",
+    title: "Поддержка 24/7",
+    description: "Круглосуточная поддержка через чат в приложении",
   },
   {
     icon: "Trophy",
-    title: "Бонусы",
-    description: "Дополнительные выплаты за выполнение планов",
+    title: "Бонусная система",
+    description: "Премии за выполнение плана и высокий рейтинг",
   },
   {
-    icon: "Shield",
-    title: "Страховка",
-    description: "Полное страхование на время работы",
+    icon: "Car",
+    title: "Любой транспорт",
+    description: "Пешком, на велосипеде, самокате или автомобиле",
   },
 ];
 
@@ -39,7 +39,7 @@ const BenefitsSection = () => {
   return (
     <section className="py-12">
       <h2 className="text-3xl font-bold text-center mb-8 text-gray-800">
-        Почему выбирают нас?
+        Преимущества работы в Яндекс.Еде
       </h2>
 
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
