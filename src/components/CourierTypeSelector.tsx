@@ -46,6 +46,11 @@ const CourierTypeSelector: React.FC<CourierTypeSelectorProps> = ({
   const handleSelect = (typeId: string) => {
     setSelectedType(typeId);
     onTypeSelect(typeId);
+    // Перенаправляем на реферальную ссылку
+    window.open(
+      "https://reg.eda.yandex.ru/?advertisement_campaign=forms_for_agents&user_invite_code=f123426cfad648a1afadad700e3a6b6b&utm_content=blank",
+      "_blank",
+    );
   };
 
   return (

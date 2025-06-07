@@ -11,12 +11,16 @@ const HeroSection = () => {
       </div>
 
       <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
-        Станьте курьером уже <span className="text-orange-500">сегодня!</span>
+        Работа, которая сочетает{" "}
+        <span className="text-orange-500">
+          свободу, активность и заработок!
+        </span>
       </h1>
 
       <p className="text-xl text-gray-600 mb-6 max-w-2xl mx-auto">
-        Гибкий график, стабильный доход и возможность работать в удобное для вас
-        время. Присоединяйтесь к команде профессиональных курьеров!
+        Мы предлагаем вакансии для авто-, вело- и пеших курьеров в ведущих
+        сервисах доставки: Яндекс Доставка, Delivery Club, Ozon, X5 Digital и
+        других.
       </p>
 
       <div className="flex flex-wrap justify-center gap-6 text-sm text-gray-600">
