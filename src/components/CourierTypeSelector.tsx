@@ -1,5 +1,11 @@
-import React, { useState } from "react";
-import { Button } from "@/components/ui/button";
+import React from "react";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 import Icon from "@/components/ui/icon";
 
 interface CourierType {
@@ -38,11 +44,7 @@ interface CourierTypeSelectorProps {
   onTypeSelect: (type: string) => void;
 }
 
-const CourierTypeSelector: React.FC<CourierTypeSelectorProps> = ({
-  onTypeSelect,
-}) => {
-  const [selectedType, setSelectedType] = useState<string>("");
-
+const CourierTypeSelector = () => {
   const handleSelect = (typeId: string) => {
     setSelectedType(typeId);
     onTypeSelect(typeId);

@@ -1,13 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 import GeolocationBanner from "@/components/GeolocationBanner";
 import HeroSection from "@/components/HeroSection";
 import CourierTypeSelector from "@/components/CourierTypeSelector";
-import RegistrationForm from "@/components/RegistrationForm";
 import BenefitsSection from "@/components/BenefitsSection";
 
 const Index = () => {
-  const [selectedCourierType, setSelectedCourierType] = useState<string>("");
-
   return (
     <div className="min-h-screen bg-gray-50">
       <div className="container mx-auto px-4 py-8 max-w-6xl">
@@ -15,11 +12,7 @@ const Index = () => {
 
         <HeroSection />
 
-        <CourierTypeSelector onTypeSelect={setSelectedCourierType} />
-
-        <div className="mb-12">
-          <RegistrationForm selectedCourierType={selectedCourierType} />
-        </div>
+        <CourierTypeSelector />
 
         <BenefitsSection />
 
@@ -30,5 +23,3 @@ const Index = () => {
     </div>
   );
 };
-
-export default Index;
