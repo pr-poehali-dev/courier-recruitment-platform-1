@@ -50,37 +50,35 @@ const CourierTypeSelector: React.FC<CourierTypeSelectorProps> = ({
 
   return (
     <div className="mb-8">
-      <h3 className="text-3xl font-bold text-center mb-8 text-slate-800">
-        Выберите тип работы в Петербурге
+      <h3 className="text-2xl font-bold text-center mb-6 text-gray-800">
+        Выберите тип работы
       </h3>
-      <div className="grid md:grid-cols-3 gap-6">
+      <div className="grid md:grid-cols-3 gap-4">
         {courierTypes.map((type) => (
           <div
             key={type.id}
-            className={`p-6 rounded-xl border-2 cursor-pointer transition-all duration-300 hover:shadow-xl hover:scale-105 backdrop-blur-sm ${
+            className={`p-6 rounded-lg border-2 cursor-pointer transition-all duration-200 hover:shadow-lg ${
               selectedType === type.id
-                ? "border-blue-400 bg-blue-500/20 shadow-xl scale-105"
-                : "border-slate-200/50 bg-white/70 hover:border-blue-300/50"
+                ? "border-blue-500 bg-blue-50 shadow-md"
+                : "border-gray-200 hover:border-gray-300"
             }`}
             onClick={() => handleSelect(type.id)}
           >
             <div className="text-center">
               <div
-                className={`inline-flex p-4 rounded-full mb-4 transition-all duration-300 ${
+                className={`inline-flex p-4 rounded-full mb-4 ${
                   selectedType === type.id
-                    ? "bg-blue-500 text-white shadow-lg"
-                    : "bg-slate-100 text-slate-600 hover:bg-blue-100"
+                    ? "bg-blue-500 text-white"
+                    : "bg-gray-100 text-gray-600"
                 }`}
               >
                 <Icon name={type.icon} size={32} />
               </div>
-              <h4 className="font-bold text-xl mb-2 text-slate-800">
+              <h4 className="font-semibold text-lg mb-2 text-gray-800">
                 {type.title}
               </h4>
-              <p className="text-slate-600 mb-3">{type.description}</p>
-              <p className="font-bold text-xl text-orange-600">
-                {type.earnings}
-              </p>
+              <p className="text-gray-600 text-sm mb-2">{type.description}</p>
+              <p className="font-bold text-orange-600">{type.earnings}</p>
             </div>
           </div>
         ))}

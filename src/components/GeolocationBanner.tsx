@@ -46,31 +46,25 @@ const GeolocationBanner = () => {
 
   if (isLoading) {
     return (
-      <div className="bg-blue-500/20 backdrop-blur-sm border border-blue-400/30 rounded-xl p-4 mb-6 shadow-lg">
+      <div className="bg-blue-50 border-l-4 border-blue-400 p-4 mb-6">
         <div className="flex items-center">
           <Icon
             name="MapPin"
-            className="text-blue-300 mr-2 animate-pulse drop-shadow"
+            className="text-blue-400 mr-2 animate-pulse"
             size={20}
           />
-          <p className="text-white font-medium drop-shadow">
-            Определяем ваше местоположение...
-          </p>
+          <p className="text-blue-700">Определяем ваше местоположение...</p>
         </div>
       </div>
     );
   }
 
   return (
-    <div className="bg-blue-500/20 backdrop-blur-sm border border-blue-400/30 rounded-xl p-4 mb-6 shadow-lg">
+    <div className="bg-blue-50 border-l-4 border-blue-400 p-4 mb-6">
       <div className="flex items-center">
-        <Icon
-          name="MapPin"
-          className="text-blue-300 mr-2 drop-shadow"
-          size={20}
-        />
-        <p className="text-white font-medium drop-shadow">
-          Ваш город: <span className="font-bold text-orange-300">{city}</span>
+        <Icon name="MapPin" className="text-blue-400 mr-2" size={20} />
+        <p className="text-blue-700">
+          Ваш город: <span className="font-semibold">{city}</span>
         </p>
       </div>
     </div>

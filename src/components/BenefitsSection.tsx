@@ -38,24 +38,24 @@ const benefits = [
 const BenefitsSection = () => {
   return (
     <section className="py-12">
-      <h2 className="text-3xl font-bold text-center mb-10 text-slate-800">
-        Почему выбирают работу курьером в Петербурге?
+      <h2 className="text-3xl font-bold text-center mb-8 text-gray-800">
+        Почему выбирают нас?
       </h2>
 
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
         {benefits.map((benefit, index) => (
           <Card
             key={index}
-            className="hover:shadow-xl transition-all duration-300 hover:scale-105 bg-white/80 backdrop-blur-sm border-slate-200/50"
+            className="hover:shadow-lg transition-shadow duration-200"
           >
             <CardContent className="p-6 text-center">
-              <div className="inline-flex items-center justify-center w-14 h-14 bg-gradient-to-br from-blue-100 to-blue-200 rounded-full mb-4 shadow-md">
-                <Icon name={benefit.icon} className="text-blue-600" size={28} />
+              <div className="inline-flex items-center justify-center w-12 h-12 bg-blue-100 rounded-full mb-4">
+                <Icon name={benefit.icon} className="text-blue-500" size={24} />
               </div>
-              <h3 className="font-bold text-xl mb-3 text-slate-800">
+              <h3 className="font-semibold text-lg mb-2 text-gray-800">
                 {benefit.title}
               </h3>
-              <p className="text-slate-600">{benefit.description}</p>
+              <p className="text-gray-600 text-sm">{benefit.description}</p>
             </CardContent>
           </Card>
         ))}
