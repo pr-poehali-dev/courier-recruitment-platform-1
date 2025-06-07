@@ -25,11 +25,24 @@ const RegistrationForm: React.FC<RegistrationFormProps> = ({
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Регистрация:", {
-      ...formData,
-      courierType: selectedCourierType,
-    });
-    alert("Спасибо за регистрацию! Мы свяжемся с вами в ближайшее время.");
+
+    // Базовая партнерская ссылка
+    const baseUrl =
+      "https://reg.eda.yandex.ru/?advertisement_campaign=forms_for_agents&user_invite_code=f123426cfad648a1afadad700e3a6b6b&utm_content=blank";
+
+    // Добавляем данные из формы как дополнительные параметры
+    const urlParams = new URLSearchParams();
+    urlParams.append("utm_source", "recruitment_site");
+    urlParams.append("utm_medium", "registration_form");
+    urlParams.append("courier_type", selectedCourierType);
+    urlParams.append("applicant_name", formData.name);
+    urlParams.append("applicant_phone", formData.phone);
+    urlParams.append("applicant_email", formData.email);
+
+    const finalUrl = `${baseUrl}&${urlParams.toString()}`;
+
+    // Переходим на партнерскую ссылку
+    window.open(finalUrl, "_blank");
   };
 
   return (
@@ -92,7 +105,9 @@ const RegistrationForm: React.FC<RegistrationFormProps> = ({
             className="w-full bg-orange-500 hover:bg-orange-600 text-white font-semibold py-2 px-4 rounded-md transition-colors"
             disabled={!selectedCourierType}
           >
-            {selectedCourierType ? "Подать заявку" : "Выберите тип работы"}
+            {selectedCourierType
+              ? "Подать заявку в Яндекс.Еду"
+              : "Выберите тип работы"}
           </Button>
         </form>
       </CardContent>
