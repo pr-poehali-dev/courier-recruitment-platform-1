@@ -1,11 +1,31 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import React, { useState } from "react";
+import GeolocationBanner from "@/components/GeolocationBanner";
+import HeroSection from "@/components/HeroSection";
+import CourierTypeSelector from "@/components/CourierTypeSelector";
+import RegistrationForm from "@/components/RegistrationForm";
+import BenefitsSection from "@/components/BenefitsSection";
 
 const Index = () => {
+  const [selectedCourierType, setSelectedCourierType] = useState<string>("");
+
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4 color-black text-black">Добро пожаловать!</h1>
-        <p className="text-xl text-gray-600">тут будет отображаться ваш проект</p>
+    <div className="min-h-screen bg-gray-50">
+      <div className="container mx-auto px-4 py-8 max-w-6xl">
+        <GeolocationBanner />
+
+        <HeroSection />
+
+        <CourierTypeSelector onTypeSelect={setSelectedCourierType} />
+
+        <div className="mb-12">
+          <RegistrationForm selectedCourierType={selectedCourierType} />
+        </div>
+
+        <BenefitsSection />
+
+        <footer className="text-center py-8 text-gray-500 text-sm border-t border-gray-200 mt-12">
+          <p>© 2024 Курьерская служба. Все права защищены.</p>
+        </footer>
       </div>
     </div>
   );
