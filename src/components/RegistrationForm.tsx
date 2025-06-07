@@ -36,8 +36,8 @@ const RegistrationForm: React.FC<RegistrationFormProps> = ({
     <Card className="max-w-md mx-auto">
       <CardHeader>
         <CardTitle className="text-center flex items-center justify-center gap-2">
-          <Icon name="UserPlus" className="text-yellow-500" size={24} />
-          Регистрация курьера
+          <Icon name="UserPlus" className="text-blue-500" size={24} />
+          Быстрая регистрация
         </CardTitle>
       </CardHeader>
       <CardContent>
@@ -89,12 +89,10 @@ const RegistrationForm: React.FC<RegistrationFormProps> = ({
 
           <Button
             type="submit"
-            className="w-full bg-yellow-500 hover:bg-yellow-600 text-black font-semibold py-2 px-4 rounded-md transition-colors"
+            className="w-full bg-orange-500 hover:bg-orange-600 text-white font-semibold py-2 px-4 rounded-md transition-colors"
             disabled={!selectedCourierType}
           >
-            {selectedCourierType
-              ? "Стать курьером Яндекс.Еды"
-              : "Выберите тип работы"}
+            {selectedCourierType ? "Подать заявку" : "Выберите тип работы"}
           </Button>
         </form>
       </CardContent>
