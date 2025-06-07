@@ -46,17 +46,17 @@ const RegistrationForm: React.FC<RegistrationFormProps> = ({
   };
 
   return (
-    <Card className="max-w-md mx-auto">
-      <CardHeader>
-        <CardTitle className="text-center flex items-center justify-center gap-2">
-          <Icon name="UserPlus" className="text-blue-500" size={24} />
+    <Card className="max-w-md mx-auto shadow-2xl bg-white/90 backdrop-blur-sm border-slate-200/50">
+      <CardHeader className="bg-gradient-to-r from-blue-500 to-blue-600 text-white rounded-t-lg">
+        <CardTitle className="text-center flex items-center justify-center gap-2 text-xl">
+          <Icon name="UserPlus" className="text-white drop-shadow" size={28} />
           Быстрая регистрация
         </CardTitle>
       </CardHeader>
-      <CardContent>
-        <form onSubmit={handleSubmit} className="space-y-4">
+      <CardContent className="p-6">
+        <form onSubmit={handleSubmit} className="space-y-5">
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">
+            <label className="block text-sm font-semibold text-slate-700 mb-2">
               Ваше имя
             </label>
             <input
@@ -64,14 +64,14 @@ const RegistrationForm: React.FC<RegistrationFormProps> = ({
               name="name"
               value={formData.name}
               onChange={handleInputChange}
-              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
               placeholder="Введите ваше имя"
               required
             />
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">
+            <label className="block text-sm font-semibold text-slate-700 mb-2">
               Телефон
             </label>
             <input
@@ -79,14 +79,14 @@ const RegistrationForm: React.FC<RegistrationFormProps> = ({
               name="phone"
               value={formData.phone}
               onChange={handleInputChange}
-              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
               placeholder="+7 (999) 123-45-67"
               required
             />
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">
+            <label className="block text-sm font-semibold text-slate-700 mb-2">
               Email
             </label>
             <input
@@ -94,7 +94,7 @@ const RegistrationForm: React.FC<RegistrationFormProps> = ({
               name="email"
               value={formData.email}
               onChange={handleInputChange}
-              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
               placeholder="your@email.com"
               required
             />
@@ -102,12 +102,12 @@ const RegistrationForm: React.FC<RegistrationFormProps> = ({
 
           <Button
             type="submit"
-            className="w-full bg-orange-500 hover:bg-orange-600 text-white font-semibold py-2 px-4 rounded-md transition-colors"
+            className="w-full bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl"
             disabled={!selectedCourierType}
           >
             {selectedCourierType
-              ? "Подать заявку в Яндекс.Еду"
-              : "Выберите тип работы"}
+              ? "🚀 Подать заявку в Яндекс.Еду"
+              : "⬆️ Выберите тип работы"}
           </Button>
         </form>
       </CardContent>
